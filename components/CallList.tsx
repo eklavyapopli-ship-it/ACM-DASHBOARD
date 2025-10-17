@@ -1,0 +1,79 @@
+"use client";
+import React from 'react'
+import { Call } from '@stream-io/video-react-sdk';
+import { useState } from 'react';
+import { useGetCalls } from './useGetCalls'
+import { useRouter } from 'next/navigation';
+import { CallRecording } from '@stream-io/node-sdk';
+import MeetingCard from './MeetingCard';
+const CallList = ({type}:{type:'ended'|'upcoming'|'recordings'}) => {
+    const {endedCalls,upcomingCalls, callRecordings, isLoading} = useGetCalls();
+    const router = useRouter();
+    const [recordings, setRecordings] = useState<CallRecording[]>([]);
+    const getCalls=()=>{
+        switch(type){
+            case 'ended':
+                return endedCalls;
+            case 'recordings':
+                return recordings;
+            case 'upcoming':
+                return upcomingCalls;
+            default:
+                return [];
+        }
+    }
+    const getNoCallsMessage=()=>{
+        switch(type){
+            case 'ended':
+                return "no previous calls";
+            case 'recordings':
+                return "no recordings";
+            case 'upcoming':
+                return "no upcoming calls";
+            default:
+                return [];
+        }
+    }
+    const calls = getCalls();
+    const noCallsMessage = getNoCallsMessage();
+  return (
+    <div className='grid grid-cols-1 md:grid-cols-2 gap-1 '>
+{calls && calls.length>0 ? calls.map((meeting:Call | CallRecording)=>(
+    <MeetingCard   key={(meeting as Call).id}
+            icon={
+              type === 'ended'
+                ? '/icons/previous.svg'
+                : type === 'upcoming'
+                  ? '/icons/upcoming.svg'
+                  : '/icons/recordings.svg'
+            }
+            title={
+              (meeting as Call).state?.custom?.description ||
+              (meeting as CallRecording).filename?.substring(0, 20) ||
+              'No Description'
+            }
+            date={
+              (meeting as Call).state?.startsAt?.toLocaleString() ||
+              (meeting as CallRecording).start_time?.toLocaleString()
+            }
+            isPreviousMeeting={type === 'ended'}
+            link={
+              type === 'recordings'
+                ? (meeting as CallRecording).url
+                : `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${(meeting as Call).id}`
+            }
+            buttonIcon1={type === 'recordings' ? '/icons/play.svg' : undefined}
+            buttonText={type === 'recordings' ? 'Play' : 'Start'}
+            handleClick={
+              type === 'recordings'
+                ? () => router.push(`${(meeting as CallRecording).url}`)
+                : () => router.push(`/meeting/${(meeting as Call).id}`)
+            }/>
+)): (
+    <h1 className='text-black'>{noCallsMessage}</h1>
+)}
+    </div>
+  )
+}
+
+export default CallList

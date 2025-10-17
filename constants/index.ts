@@ -6,15 +6,11 @@ export const sidebarLinks=[
         route:"/",
     },
     {
-        label:"Upcoming",
+        label:"Schedule",
         imgUrl:Calendar1,
         route:"/upcoming",
     },
-    {
-        label:"Previous",
-        imgUrl:CircleArrowLeft,
-        route:"/previous",
-    },
+   
     {
         label:"Recordings",
         imgUrl:Video,
@@ -28,6 +24,6 @@ export const sidebarLinks=[
     {
         label:"Chat Room",
         imgUrl:MessageCircle,
-        route:"/personal",
+        route:"/chatroom",
     },
 ]
