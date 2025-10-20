@@ -6,7 +6,7 @@ import Link from 'next/link';
 import {cn} from '@/lib/utils';
 import Image from 'next/image';
 import { House } from 'lucide-react';
-const sidebar = () => {
+const Sidebar = () => {
   const pathname= usePathname();
   return (
     <section className='sticky left-0 top-0 flex h-screen w-fit flex-col justify-between mt-40 p-6 text-white max-sm:hidden '>
@@ -21,7 +21,7 @@ return (
     >
       
       <link.imgUrl className='text-black' size={20}/>
-     {/* <Image src={link.imgUrl} alt={link.label} width={24} height={24}/> */}
+     
      <p className='text-lg font-semibold max-lg:hidden text-black'>{link.label}</p>
     </Link>
   );
@@ -33,4 +33,4 @@ return (
   )
 }
 
-export default sidebar
+export default Sidebar
