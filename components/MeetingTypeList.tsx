@@ -76,13 +76,13 @@ if(!values.description){
     description="Join an Ongoing Meeting"
  handleClick={()=>router.push('/recordings')}
     className="bg-[#1766FD]"/>
-
+<a href="https://acm-chat-room.vercel.app">
     <HomeCard
     icons={<MessageSquare className="h-10 w-10 text-white" />}
        title="Chat Room"
     description="Connect to Connect"
- handleClick={()=>router.push('/chatroom')}
-    className="bg-[#A814EC]"/>
+ handleClick={()=>{}}
+    className="bg-[#A814EC]"/></a>
     <HomeCard
     icons={<GithubIcon className="h-20 w-20 text-white" />}
        title="GitHub Repos"

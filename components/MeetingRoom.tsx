@@ -64,8 +64,8 @@ const MeetingRoom = () => {
       </div>
 
       {/* Bottom Controls */}
-      <div className="fixed bottom-0 flex w-full items-center justify-center gap-5 bg-black py-2">
-        <CallControls onLeave={() => setIsMeetingGoingOn(false)} />
+      <div className="fixed bottom-0 flex border border-white w-full items-center justify-center gap-5 bg-black py-2  flex-wrap">
+        <CallControls  onLeave={() => setIsMeetingGoingOn(false)} />
 
         {/* Layout Dropdown */}
         <DropdownMenu>

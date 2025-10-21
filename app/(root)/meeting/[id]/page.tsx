@@ -2,12 +2,13 @@
 
 import { use } from "react";
 import Loader from "@/components/Loader";
-import { StreamCall, StreamTheme } from "@stream-io/video-react-sdk";
+import { StreamCall, StreamTheme ,  StreamVideo } from "@stream-io/video-react-sdk";
 import { useUser } from "@clerk/nextjs";
 import React, { useState } from "react";
 import MeetingSetup from "@/components/MeetingSetup";
 import MeetingRoom from "@/components/MeetingRoom";
 import { useGetCallById } from "@/hooks/UseGetCallById";
+import { clerkClient } from "@clerk/nextjs/server";
 
 export default function Meeting({ params }: { params: Promise<{ id: string }> }) {
   // ✅ unwrap params using React.use()
@@ -21,6 +22,7 @@ export default function Meeting({ params }: { params: Promise<{ id: string }> })
 
   return (
     <main className="h-screen w-full">
+   
       <StreamCall call={call}>
         <StreamTheme>
           {!isSetupComplete ? (
