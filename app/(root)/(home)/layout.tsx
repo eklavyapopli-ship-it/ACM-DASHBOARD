@@ -17,12 +17,13 @@ const HomeLayout = ({ children }: { children: ReactNode }) => {
         <main className=''>
             <Navbar/>
             <div className='flex'>
-                <Sidebar/>
+                
                 <section className='flex min-h-screen mt-8 flex-1 flex-col px-6 pb-6 pt-28 max-md:pb-14 sm:px-14'>
                     <div>
                         {children}
                     </div>
                 </section>
+                <Sidebar/>
             </div>
 
         </main>

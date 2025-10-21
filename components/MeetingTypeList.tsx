@@ -61,7 +61,7 @@ if(!values.description){
  }
 
   return (
-<section className='grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-4'>
+<section className='grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-4 '>
     <HomeCard
     title="New Meeting"
    icons={<Plus className="h-10 w-10 text-white" />}
@@ -76,7 +76,7 @@ if(!values.description){
     description="Join an Ongoing Meeting"
  handleClick={()=>router.push('/recordings')}
     className="bg-[#1766FD]"/>
-<a href="https://acm-chat-room.vercel.app">
+<a href="https://acm-chatroom.vercel.app">
     <HomeCard
     icons={<MessageSquare className="h-10 w-10 text-white" />}
        title="Chat Room"

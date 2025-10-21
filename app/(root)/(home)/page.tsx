@@ -90,17 +90,11 @@ if(!values.description){
   if (!isLoaded) return null;
 
   return (
-    <main className="px-4 md:px-8 lg:px-16">
+    <main className="px-0 lg:px-0">
       {/* Top Section */}
-      <section className="md:flex flex-col lg:flex-row size-full gap-3 text-white mt-8  flex  ">
-        <div
-          className="h-[400px] md:h-[500px] w-full rounded-[20px] bg-[linear-gradient(to_bottom,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('/icons/laptop.jpg')] bg-cover bg-center flex items-center">
-          <div className="mt-20 md:mt-0 ml-6 md:ml-20 font-bold text-4xl md:text-6xl flex flex-col  ">
-            <div className="">{greeting} {user?.firstName || user?.fullName || "there"}</div>
-          </div>
-        </div>
-
-        <div className="flex flex-row lg:flex-col gap-4 lg:-mt-10 justify-start md:justify-center ">
+      
+      <section className="md:flex flex-col lg:flex-row size-full gap-3 text-white mt-8 flex  ">
+         <div className="flex flex-row lg:flex-col gap-4 lg:-mt-10 justify-start md:justify-center ">
        <HomeCard
     title="Knowledge Sharing Sessions"
    icons={<LibraryBig className="h-10 w-10 text-white" />}
@@ -108,14 +102,23 @@ if(!values.description){
 handleClick={()=>setMeetingState('isScheduleMeeting')}
     className="bg-blue-600 "
     />
+    <a href="https://acm-chatroom.vercel.app/">
             <HomeCard
     title="Knowledge Sharing Sessions"
    icons={<LoaderPinwheel className="h-10 w-10 text-white" />}
     description="My Progress"
 handleClick={()=>{}}
     className="bg-[#EC14AB]"
-    />
+    /></a>
         </div>
+        <div
+          className="h-[400px] md:h-[500px] w-full rounded-[20px] bg-[linear-gradient(to_bottom,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('/icons/laptop.jpg')] bg-cover bg-center flex items-center">
+          <div className="mt-20 md:mt-0 ml-6 md:ml-20 font-bold text-4xl md:text-6xl flex flex-col  ">
+            <div className="">{greeting} {user?.firstName || user?.fullName || "there"}</div>
+          </div>
+        </div>
+
+       
         {!callDetails ? (
    <MeetingModel
     isOpen={meetingState === 'isScheduleMeeting' }

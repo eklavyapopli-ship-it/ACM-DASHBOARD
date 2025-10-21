@@ -6,7 +6,7 @@ import MobileNav from './MobileNav'
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 const navbar = () => {
   return (
-    <main className=' fixed bg-white/60 z-50 shadow-2xl'>
+    <main className=' fixed bg-white/60 z-50 shadow-2xl w-full'>
     <nav className=' z-50 w-screen top-0  px-6 py-4 lg:px-10 flex  justify-between'>
       <Link href="/" className='flex items-center gap-1'>
       <Image src="/icons/logo.png" width={100} height={100} alt='logo' className='object-cover max-sm:size-30 '/>
