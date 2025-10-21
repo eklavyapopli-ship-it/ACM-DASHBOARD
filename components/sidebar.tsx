@@ -9,7 +9,7 @@ import { House } from 'lucide-react';
 const Sidebar = () => {
   const pathname= usePathname();
   return (
-    <section className='sticky right-10 top-0 flex h-screen w-fit flex-col justify-between mt-40 p-6 text-white max-sm:hidden '>
+    <section className='sticky right-3 top-0 flex h-screen w-fit flex-col justify-between mt-40 p-6 text-white max-sm:hidden '>
         <div className='flex flex-col gap-6'>
 {sidebarLinks.map((link) => {
  const isActive = pathname === link.route || pathname.startsWith(`${link.route}/`);

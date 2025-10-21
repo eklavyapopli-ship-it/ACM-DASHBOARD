@@ -87,7 +87,7 @@ if(!values.description){
     icons={<GithubIcon className="h-20 w-20 text-white" />}
        title="GitHub Repos"
     description="ACM - OCs"
-    handleClick={()=>router.push('/recordings')}
+    handleClick={()=>router.push('/github')}
     className="bg-[#000000]"/>
     <HomeCard
     icons={<BookCopy className="h-10 w-10 text-white" />}

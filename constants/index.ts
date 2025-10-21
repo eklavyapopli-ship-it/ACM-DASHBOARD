@@ -1,4 +1,4 @@
-import { House ,Calendar1 , CircleArrowLeft, Video, Plus, LoaderPinwheel, MessageCircle} from 'lucide-react';
+import { House ,Calendar1 , CircleArrowLeft, Video, Plus, LoaderPinwheel, MessageCircle, GithubIcon} from 'lucide-react';
 export const sidebarLinks=[
     {
         label:"Home",
@@ -10,11 +10,11 @@ export const sidebarLinks=[
         imgUrl:Calendar1,
         route:"/upcoming",
     },
-   
-    {
-        label:"Recordings",
-        imgUrl:Video,
-        route:"/recordings",
+  
+     {
+        label:"GitHub",
+        imgUrl:GithubIcon,
+        route:"/github",
     },
     {
         label:"My Progress",
@@ -26,4 +26,5 @@ export const sidebarLinks=[
         imgUrl:MessageCircle,
         route:"/chatroom",
     },
+   
 ]
