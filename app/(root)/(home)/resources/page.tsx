@@ -46,7 +46,7 @@ const Resources = () => {
 
   {data.map((item)=>(
     
-       <a href={item.link} key={item._id} target='_blank'> <div className=' flex gap-1 bg-white h-30 text-xl text-black font-bold max-w-[500px] rounded-2xl m-5'>
+       <a href={item.link} className=' max-w-[400px]  ' key={item._id} target='_blank'> <div className=' md:flex place-items-center md:place-content-start  place-content-center  bg-white h-30 md:text-xl text-sm text-black font-bold max-w-[400px] rounded-2xl m-5'>
             <div className='w-20 flex place-content-center place-items-center' ><BookCheck/></div>
             <div className='w-fit flex place-items-center'>{item.name}</div>
             </div></a>
