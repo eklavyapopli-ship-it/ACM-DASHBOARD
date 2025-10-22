@@ -118,7 +118,14 @@
   }
   body {
     @apply bg-background text-foreground;
-   background: linear-gradient(to right, #1f2937, #1d4ed8, #111827);
+   background: linear-gradient(
+  to right,
+  #384cff , /* indigo-400 */
+  #93c5fd, /* blue-300 */
+  #cffafe /* cyan-100 */
+);
+
+
 
   }
 }

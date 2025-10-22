@@ -1,4 +1,4 @@
-import { House ,Calendar1 , CircleArrowLeft, Video, Plus, LoaderPinwheel, MessageCircle, GithubIcon} from 'lucide-react';
+import { House ,Calendar1 , CircleArrowLeft, Video, Plus, LoaderPinwheel, MessageCircle, GithubIcon, BookCheck} from 'lucide-react';
 export const sidebarLinks=[
     {
         label:"Home",
@@ -25,6 +25,12 @@ export const sidebarLinks=[
         label:"Chat Room",
         imgUrl:MessageCircle,
         route:"https://acm-chatroom.vercel.app",
+    },
+   
+    {
+        label:"Resources",
+        imgUrl: BookCheck,
+        route:"/resources",
     },
    
 ]
