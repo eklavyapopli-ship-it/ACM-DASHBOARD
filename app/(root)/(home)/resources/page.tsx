@@ -4,7 +4,12 @@ import React from 'react'
 import { useState , useEffect} from 'react'
 import { BookCheck } from 'lucide-react'
 const Resources = () => {
- const [data, setData] = useState<any[]>([]);
+  interface ResourceItem {
+  _id: string;
+  name: string;
+  link: string;
+}
+ const [data, setData] = useState<ResourceItem[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
