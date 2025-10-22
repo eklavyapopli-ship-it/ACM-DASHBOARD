@@ -16,11 +16,7 @@ export const sidebarLinks=[
         imgUrl:GithubIcon,
         route:"/github",
     },
-    {
-        label:"My Progress",
-        imgUrl:LoaderPinwheel,
-        route:"/personal",
-    },
+
     {
         label:"Chat Room",
         imgUrl:MessageCircle,

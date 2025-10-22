@@ -70,12 +70,7 @@ if(!values.description){
     className="bg-[#ec7214]"
     />
 
-    <HomeCard
-    icons={<MessageSquare className="h-10 w-10 text-white" />}
-       title="Join Meeting"
-    description="Join an Ongoing Meeting"
- handleClick={()=>router.push('/recordings')}
-    className="bg-[#1766FD]"/>
+    
 <a href="https://acm-chatroom.vercel.app">
     <HomeCard
     icons={<MessageSquare className="h-10 w-10 text-white" />}
@@ -89,13 +84,13 @@ if(!values.description){
     description="ACM - OCs"
     handleClick={()=>router.push('/github')}
     className="bg-[#000000]"/>
-    <HomeCard
+   
+<HomeCard
     icons={<BookCopy className="h-10 w-10 text-white" />}
-       title="Resources"
-    description="Cheat Sheets"
+       title="Additional Resources"
+    description="React, Next JS"
  handleClick={()=>router.push('/resources')}
     className="bg-[#1c1c41]"/>
-
 
 
     <MeetingModel

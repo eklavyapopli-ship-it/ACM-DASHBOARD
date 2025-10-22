@@ -1,6 +1,6 @@
 import React from 'react'
 import { GithubIcon } from 'lucide-react'
-import Image from 'next/image'
+
 const Previous = () => {
   const icons=[
     {id:1,

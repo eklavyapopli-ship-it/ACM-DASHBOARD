@@ -99,17 +99,15 @@ if(!values.description){
     title="Knowledge Sharing Sessions"
    icons={<LibraryBig className="h-10 w-10 text-white" />}
     description="Schedule"
-handleClick={()=>setMeetingState('isScheduleMeeting')}
-    className="bg-blue-600 "
+handleClick={()=>router.push('/upcoming')}
+    className="bg-black "
     />
-    <a href="https://acm-chatroom.vercel.app/">
-            <HomeCard
-    title="Knowledge Sharing Sessions"
-   icons={<LoaderPinwheel className="h-10 w-10 text-white" />}
-    description="My Progress"
-handleClick={()=>{}}
-    className="bg-[#EC14AB]"
-    /></a>
+    <HomeCard
+    icons={<BookCopy className="h-10 w-10 text-white" />}
+       title="Resources"
+    description="Cheat Sheets"
+ handleClick={()=>router.push('/resources')}
+    className="bg-[#1c1c41]"/>
         </div>
         <div
           className="h-[400px] md:h-[500px] w-full rounded-[20px] bg-[linear-gradient(to_bottom,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('/icons/laptop.jpg')] bg-cover bg-center flex items-center">
