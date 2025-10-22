@@ -93,7 +93,7 @@ if(!values.description){
     icons={<BookCopy className="h-10 w-10 text-white" />}
        title="Resources"
     description="Cheat Sheets"
- handleClick={()=>router.push('/recordings')}
+ handleClick={()=>router.push('/resources')}
     className="bg-[#1c1c41]"/>
 
 

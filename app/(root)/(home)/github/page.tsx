@@ -86,11 +86,11 @@ const Previous = () => {
       {icons.map((icon)=>{
         return(
           
-         <a href={icon.links}  key={icon.id}> <div  className=' md:w-60 md:h-80 h-40 w-30 bg-black rounded-2xl place-content-start place-items-center flex flex-col '>
+         <a href={icon.links}  key={icon.id}> <div  className=' md:w-60 md:h-80 h-40 w-30  rounded-2xl place-content-start place-items-center bg-black cursor-pointer flex flex-col text-white'>
             <div  className=''>
             
     <img src={icon.img} alt="" className='md:h-32 md:w-32 w-10 h-10 m-10 rounded-full' /></div>
-    <div className=' flex flex-col flex-1 mb-3 place-content-center'><h1 className='md:text-lg text-sm flex place-items-center'><GithubIcon className='h-5 w-5'/> {icon.name}</h1></div>
+    <div className=' flex flex-col flex-1 mb-3 place-content-center'><h1 className='md:text-lg text-sm flex place-items-center '><GithubIcon className='h-5 w-5 '/> {icon.name}</h1></div>
           </div></a>
         )
       })}</div>

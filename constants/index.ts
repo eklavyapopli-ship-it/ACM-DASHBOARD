@@ -24,7 +24,7 @@ export const sidebarLinks=[
     {
         label:"Chat Room",
         imgUrl:MessageCircle,
-        route:"/chatroom",
+        route:"https://acm-chatroom.vercel.app",
     },
    
 ]

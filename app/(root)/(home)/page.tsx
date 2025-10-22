@@ -90,7 +90,7 @@ if(!values.description){
   if (!isLoaded) return null;
 
   return (
-    <main className="px-0 lg:px-0">
+    <main className="px-0 lg:px-0 ">
       {/* Top Section */}
       
       <section className="md:flex flex-col lg:flex-row size-full gap-3 text-white mt-8 flex  ">
