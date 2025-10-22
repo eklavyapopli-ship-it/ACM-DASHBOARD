@@ -3,19 +3,24 @@
 import React from 'react'
 import { useState , useEffect} from 'react'
 import { BookCheck } from 'lucide-react'
-const page = () => {
-    const [data, setData] = useState<any[]>([]) 
-    const gettingData= async()=>{
-        let a = await fetch ("/api/fetch", {method:"GET", headers:{
+const Resources = () => {
+  interface ResourseItem{
+id: number;
+  name: string;
+  link:string;
+  }
+    const [data, setData] = useState<ResourseItem[]>([]) 
+    const GettingData= async()=>{
+        const a = await fetch ("/api/fetch", {method:"GET", headers:{
             "Content-Type":"application/json",
             "Accept":"application/json"
         },})
-        let res = await a.json()
-        console.log(res)
+        const res = await a.json()
+        
         setData(res)
     }
    useEffect(()=>{
-    gettingData()
+    GettingData()
    },[])
    
   return (
@@ -37,4 +42,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Resources
