@@ -18,7 +18,7 @@ const HomeCard = ({icons,className,title,description,handleClick}:HomeCardProps)
             
         </div>
         <div className='flex flex-col gap-2 text-white'>
-<h1 className='text-2xl font-bold '>{title}</h1>
+<h1 className='md:text-2xl text-lg  font-bold '>{title}</h1>
 <p className=''>{description}</p>
         </div>
     </div>

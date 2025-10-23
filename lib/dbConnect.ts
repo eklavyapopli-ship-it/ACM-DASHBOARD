@@ -7,7 +7,6 @@ let client;
 let clientPromise: Promise<MongoClient>;
 
 declare global {
-  // Allow global caching in Next.js hot reload
   var _mongoClientPromise: Promise<MongoClient> | undefined;
 }
 
