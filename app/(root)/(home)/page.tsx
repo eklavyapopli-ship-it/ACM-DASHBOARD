@@ -161,8 +161,8 @@ handleClick={()=>router.push('/upcoming')}
       </section>
 
       {/* Bottom Section */}
-      <section className=" gap-5  flex">
-      <section className="bg-black p-5 mt-20 rounded-2xl max-w-[680px]">
+      <section className=" gap-5  flex  flex-col lg:flex-row">
+      <section className="bg-black p-5 mt-20 rounded-2xl lg:w-[calc(54%)] lg:max-w-60% md:w-[calc(100%)] w-100%">
   <Resources/></section>
   <MeetingTypeList/></section>
   

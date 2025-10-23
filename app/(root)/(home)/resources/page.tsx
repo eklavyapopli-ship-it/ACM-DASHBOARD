@@ -41,14 +41,14 @@ const Resources = () => {
     <section className='mt-20'>
     <div><h1 className='text-2xl text-white font-bold  flex place-content-center place-items-center gap-10'><div ><BookCheck size={30}/></div>KSS RESOURCES</h1></div>
    
-    <div className=" mt-10 grid grid-cols-2">
+    <div className=" mt-10 grid grid-cols-1 md:grid-cols-2  place-items-center">
     
 
   {data.map((item)=>(
     
-       <a href={item.link} className=' max-w-[400px]  ' key={item._id} target='_blank'> <div className=' md:flex place-items-center md:place-content-start  place-content-center  bg-white h-30 md:text-xl text-sm text-black font-bold max-w-[400px] rounded-2xl m-5'>
+       <a href={item.link} className=' w-full ' key={item._id} target='_blank'> <div className=' md:flex place-items-center md:place-content-start  place-content-center    bg-white h-30  text-black font-bold full rounded-2xl m-5'>
             <div className='w-20 flex place-content-center place-items-center' ><BookCheck/></div>
-            <div className='w-fit flex place-items-center'>{item.name}</div>
+            <div className='w-fit flex place-items-center lg:text-lg text-sm  text-center'>{item.name}</div>
             </div></a>
        ))}
       </div>
