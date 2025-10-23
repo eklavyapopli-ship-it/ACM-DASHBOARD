@@ -61,23 +61,18 @@ if(!values.description){
  }
 
   return (
-<section className='grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-4 '>
-    <HomeCard
-    title="New Meeting"
-   icons={<Plus className="h-10 w-10 text-white" />}
-    description="Start an Instant Meeting"
-    handleClick={()=>setMeetingState('isInstantMeeting')}
-    className="bg-[#ec7214]"
-    />
+<section className=' mt-10 grid grid-cols-2 gap-2 '>
+   
 
     
-<a href="https://acm-chatroom.vercel.app">
+
+
     <HomeCard
     icons={<MessageSquare className="h-10 w-10 text-white" />}
        title="Chat Room"
     description="Connect to Connect"
- handleClick={()=>{}}
-    className="bg-[#A814EC]"/></a>
+ handleClick={()=>router.push('https://acm-chatroom.vercel.app/')}
+    className="bg-[#A814EC]"/>
     <HomeCard
     icons={<GithubIcon className="h-20 w-20 text-white" />}
        title="GitHub Repos"
@@ -91,7 +86,13 @@ if(!values.description){
     description="React, Next JS"
  handleClick={()=>router.push('/resources')}
     className="bg-[#1c1c41]"/>
-
+ <HomeCard
+    title="Knowledge Sharing Sessions"
+   icons={<LibraryBig className="h-10 w-10 text-white" />}
+    description="Schedule"
+handleClick={()=>router.push('/upcoming')}
+    className="bg-black "
+    />
 
     <MeetingModel
     isOpen={meetingState === 'isInstantMeeting' }

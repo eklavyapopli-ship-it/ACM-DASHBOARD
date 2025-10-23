@@ -10,7 +10,7 @@ import { useCall } from "@stream-io/video-react-sdk";
 
 import ReactDatePicker from 'react-datepicker'
 import { Textarea } from "@/components/ui/textarea";
-
+import Resources from "./resources/page";
 
 
 import {Calendar1 , Video,  Contact, Github, GithubIcon, MessageSquare, BookCopy} from 'lucide-react';
@@ -102,12 +102,13 @@ if(!values.description){
 handleClick={()=>router.push('/upcoming')}
     className="bg-black "
     />
-    <HomeCard
-    icons={<BookCopy className="h-10 w-10 text-white" />}
-       title="Resources"
-    description="Cheat Sheets"
- handleClick={()=>router.push('/resources')}
-    className="bg-[#1c1c41]"/>
+   <HomeCard
+    title="New Meeting"
+   icons={<Plus className="h-10 w-10 text-white" />}
+    description="Start an Instant Meeting"
+    handleClick={()=>setMeetingState('isInstantMeeting')}
+    className="bg-[#ec7214]"
+    />
         </div>
         <div
           className="h-[400px] md:h-[500px] w-full rounded-[20px] bg-[linear-gradient(to_bottom,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('/icons/laptop.jpg')] bg-cover bg-center flex items-center">
@@ -160,7 +161,11 @@ handleClick={()=>router.push('/upcoming')}
       </section>
 
       {/* Bottom Section */}
-  <MeetingTypeList/>
+      <section className=" gap-5  flex">
+      <section className="bg-black p-5 mt-20 rounded-2xl max-w-[680px]">
+  <Resources/></section>
+  <MeetingTypeList/></section>
+  
     </main>
   );
 };

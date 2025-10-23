@@ -13,7 +13,7 @@ const HomeCard = ({icons,className,title,description,handleClick}:HomeCardProps)
   
   return (
     
-<div className={cn('  mt-10 px-3 sm:px-4 py-6 flex flex-col justify-between w-full xl:w-[330px] min-h-[220px]  rounded-[14px] cursor-pointer',className)} onClick={handleClick}>
+<div className={cn('  mt-10 px-3 sm:px-4 py-6 flex flex-col justify-between w-full xl:w-[300px] min-h-[220px]  rounded-[14px] cursor-pointer',className)} onClick={handleClick}>
         <div className='flex place-content-center place-items-center size-10 rounded-[10px]'>{icons}
             
         </div>
