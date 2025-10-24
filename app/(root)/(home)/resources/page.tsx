@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 import { BookCheck } from "lucide-react";
 
@@ -19,7 +20,8 @@ const Resources: React.FC<ResourcesProps> = ({ limit }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("/api/fetch");
+        const res = await fetch("/api/data");
+        
         const json = await res.json();
 
         if (Array.isArray(json)) {
