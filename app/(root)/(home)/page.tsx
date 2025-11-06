@@ -6,6 +6,7 @@ import MeetingTypeList from "@/components/MeetingTypeList";
 import HomeCard from "@/components/HomeCard";
 import { Plus, LibraryBig, LoaderPinwheel } from "lucide-react";
 import { useRouter } from "next/navigation";
+
 import { useCall } from "@stream-io/video-react-sdk";
 
 import ReactDatePicker from 'react-datepicker'
@@ -157,7 +158,15 @@ handleClick={()=>router.push('/upcoming')}
       navigator.clipboard.writeText(meetingLink);
       toast("meeting link copied")
     }}
-    />}
+    />
+    }
+    <MeetingModel
+    isOpen={meetingState === 'isInstantMeeting' }
+    onClose={()=>setMeetingState(undefined)}
+    title="Start an Instant Meeting"
+    className="text-center"
+    buttonText="Start Meeting"
+    handleClick={createMeeting}/>
       </section>
 
       {/* Bottom Section */}
